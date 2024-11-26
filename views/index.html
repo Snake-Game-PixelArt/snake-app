@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake Game (Pixel Art)</title>
+
+  <link rel="stylesheet" href="./styles/buttons.css" />
+  <link rel="stylesheet" href="./styles/style.css" />
+
+  <link rel="shortcut icon" href="./icon.jpg" type="image/jpeg">
+</head>
+
+<body>
+  <section id="board">
+    <div id="gameEndOptions">
+      <p>
+        Best Score: <span id="gameEnded_bestscore">0</span><br />
+        Score: <span id="gameEnded_score">0</span><br />
+        Time: <span id="gameEnded_time">0 seconds</span>
+      </p>
+      <button id="newGame">New Game</button>
+    </div>
+    <div id="pixels"></div>
+  </section>
+  <div id="moves">
+    <button id="moveUP"><div></div></button>
+    <button id="moveLEFT"><div></div></button>
+    <button id="moveDOWN"><div></div></button>
+    <button id="moveRIGHT"><div></div></button>
+  </div>
+
+  <script src="./scripts/apple.js"></script>
+  <script src="./scripts/snake.js"></script>
+  <script defer src="./scripts/setup.js"></script>
+  <script defer src="./scripts/game.js"></script>
+</body>
+
+</html>

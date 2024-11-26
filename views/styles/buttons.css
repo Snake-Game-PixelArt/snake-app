@@ -1,0 +1,80 @@
+button {
+  border: none;
+  background-color: var(--teal-color);
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  box-shadow: 1px 1px 2px 0px var(--teal-color);
+  color: #3e3e3e;
+  transition: filter 200ms, transform 300ms, box-shadow 300ms;
+}
+
+button:hover {
+  filter: brightness(90%);
+  transform: rotate(-1deg);
+  box-shadow: 1px 1px 6px 0px var(--teal-color);
+}
+
+div#moves {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+}
+
+div#moves button {
+  position: relative;
+  height: calc(3vw + 1cm);
+  width: calc(3vw + 1cm);
+  --size: calc(1.5vw + 2px);
+}
+
+div#moves button div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50%;
+  width: 50%;
+  border-top: var(--size) solid #3e3e3e;
+  border-left: var(--size) solid #3e3e3e;
+}
+
+div#moves button#moveRIGHT {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+div#moves button#moveLEFT {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+div#moves button#moveUP {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+div#moves button#moveDOWN {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+div#moves button#moveRIGHT div {
+  transform: rotate(135deg) translate(0%, -70%);
+}
+
+div#moves button#moveLEFT div {
+  transform: rotate(-45deg) translate(0%, 70%);
+}
+
+div#moves button#moveUP div {
+  transform: rotate(45deg) translate(70%, 0%);
+}
+
+div#moves button#moveDOWN div {
+  transform: rotate(-135deg) translate(-70%, 0%);
+}

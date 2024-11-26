@@ -1,0 +1,25 @@
+{
+  "name": "snake-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "nodemon --exec electron .",
+    "build": "electron-packager . \"Snake Game\" --overwrite --out=build --icon=views/iconRounded.ico --version-string.ProductName=\"Snake Game\"",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=views/iconRounded.ico  --prune=true --out=build",
+    "package-win": "electron-packager . \"Snake Game\" --overwrite --asar --platform=win32 --arch=ia32 --icon=views/iconRounded.ico --prune=true --out=build --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Snake Game\"",
+    "package-linux": "electron-packager . \"Snake Game\" --overwrite --asar --platform=linux --arch=x64 --icon=views/iconRounded.ico --prune=true --out=build"
+  },
+  "author": "MohammedMMc",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^30.0.9",
+    "electron-packager": "^17.1.2",
+    "electron-rebuild": "^3.2.9"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  }
+}
